@@ -1,0 +1,154 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    display: flex;
+    height: 100vh;
+    text-align: center;
+    background-color: #D6E8EA;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+.outer-container {
+    margin: auto;
+}
+
+.container {
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.game-info, .game-container {
+    padding: 0 50px;
+    margin: 0 15px;
+}
+
+
+.title {
+    font-family: 'Dosis', sans-serif;
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+
+.settings-container {
+    margin-top: 50px;
+
+}
+
+select {
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+select, input {
+    padding: 2px 5px;
+    outline: none;
+    border: 1px solid #4C8D94;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    height: 400px;
+    border: solid 2px #7A542E;
+    background-color: #FCF3EE;
+}
+
+.square {
+    width: 20px;
+    height: 20px;
+}
+
+.snake {
+    background-color: #4C8D94;
+    border-radius: 3px;
+}
+
+.apple {
+    background-color: #E95952;
+}
+
+.settings {
+    background-color: #A1CACE;
+    padding: 15px;
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.setting {
+    padding: 10px;
+}
+
+.start-btn {
+    border: unset;
+    padding: 15px 35px;
+    background-color: #8B416B;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #fff;
+    margin-top: 25px;
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.3);
+    outline: none;
+}
+
+.start-btn:hover {
+    background-color: #6F3456;
+}
+
+.game-stats {
+    margin-top: 25px;
+}
+
+.message {
+    background-color: #BC854E;
+    padding: 5px 8px;
+    color: #fff;
+    display: none;
+}
+
+/* Mobile Controls */
+.mobile-controls {
+    margin-top: 50px;
+}
+
+.display-controls {
+    display: none;
+}
+
+.control {
+    font-size: 70px;
+}
+
+.control:hover, .control:focus {
+    color: purple;
+}
+
+.control-btn {
+    border: unset;
+    background: none;
+    outline: none;
+
+
+}
+/* Media Queries */
+@media screen and (max-width: 1000px) {
+    .title {
+        padding-top: 30px;
+        margin-bottom: 0;
+    }
+    .container {
+        display: block;
+    }
+
+    .game-info, .game-container {
+        padding: 20px 0;
+    }
+}
