@@ -22,8 +22,5 @@
 - Add option to change theme - to do
 - Used CSS variables to help with easy theme switching. Theme class is applied to `<body>` tag using JavaScript. 
 
-
-
-
 **Thoughts**
 - Had to use `e.preventDefault()` in the `control` function to prevent scroll up and down of the browser window triggered by using the up and down keys
