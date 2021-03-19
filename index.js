@@ -206,8 +206,6 @@ checkMobile.addEventListener('click', function() {
         grid.textContent = "";
         //create grid
         createGrid();
-        console.log(squares.length);
-        console.log()
         //add snake
         currentSnake.forEach(index => squares[index].classList.add('snake'));
         //add apple
