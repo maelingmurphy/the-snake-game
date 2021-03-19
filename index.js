@@ -197,12 +197,10 @@ checkMobile.addEventListener('click', function() {
     mobileControls.classList.toggle('display-controls');
     // toggle mobile class on body
     document.body.classList.toggle('mobile');
-    alert(document.body.className);
     // update grid width
     if (document.body.classList.contains('mobile')) {
         width = 10;
     } else {
         width = 20;
     }
-    alert(width);
 })
