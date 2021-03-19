@@ -167,18 +167,18 @@ function mobileControl(e) {
 function switchTheme(e) {
     if (e.target.value === 'beachy') {
         //clear all class names
-        document.body.classList = "";
+        document.body.classList.remove('beachy', 'retro', 'luxe');
         // add specific class name
         document.body.classList.add('beachy');
     }
     if (e.target.value === 'retro') {
         //clear all class names
-        document.body.classList = "";
+        document.body.classList.remove('beachy', 'retro', 'luxe');
         document.body.classList.add('retro');
     }
     if (e.target.value === 'luxe') {
         //clear all class names
-        document.body.classList = "";
+        document.body.classList.remove('beachy', 'retro', 'luxe');
         document.body.classList.add('luxe');
     }
 }
