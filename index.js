@@ -22,7 +22,7 @@ let speed = 0.95;
 let timerId = 0;
 
 function createGrid() {
-    //create 400 of these elements with a for loop
+    //create squares based on given width with a for loop
     for (let i=0; i < width*width; i++) {
         //create element
         const square = document.createElement('div');
@@ -193,5 +193,16 @@ selectTheme.addEventListener('change', switchTheme);
 document.addEventListener('keydown', control);
 startButton.addEventListener('click', startGame);
 checkMobile.addEventListener('click', function() {
+    // toggle display of mobile control buttons
     mobileControls.classList.toggle('display-controls');
+    // toggle mobile class on body
+    document.body.classList.toggle('mobile');
+    alert(document.body.className);
+    // update grid width
+    if (document.body.classList.contains('mobile')) {
+        width = 10;
+    } else {
+        width = 20;
+    }
+    alert(width);
 })
