@@ -116,11 +116,6 @@ function move() {
     squares[currentSnake[0]].classList.add('snake')
 }
 
-
-
-
-
-
 function generateApple() {
     do {
         appleIndex = Math.floor(Math.random() * squares.length)
@@ -129,15 +124,12 @@ function generateApple() {
 } 
 generateApple()
 
-
-
 // 39 is right arrow
 // 38 is for the up arrow
 // 37 is for the left arrow
 // 40 is for the down arrow
 
-function control(e) {
-   
+function control(e) {  
     if (e.keyCode === 39) {
         e.preventDefault();
         direction = 1
