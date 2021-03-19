@@ -40,13 +40,7 @@ createGrid();
 //create the snake on the game board based on currentSnake array 
 currentSnake.forEach(index => squares[index].classList.add('snake'))
 
-
-
 function startGame() {
-    //set theme based on user input
-    console.log(selectTheme.value);
-    //set speed based on user input
-    console.log(selectSpeed.value);
     switch (selectSpeed.value) {
         case 'slow':
             intervalTime = 800;
@@ -92,25 +86,20 @@ function move() {
         return clearInterval(timerId);
     }
     
-
     //remove last element from our currentSnake array
     const tail = currentSnake.pop()
     //remove styling from last element
     squares[tail].classList.remove('snake')
     //add square in direction we are heading
-    currentSnake.unshift(currentSnake[0] + direction)
-    //add styling so we can see it
-    
+    currentSnake.unshift(currentSnake[0] + direction) 
     //deal with snake head gets apple
     if (squares[currentSnake[0]].classList.contains('apple')) {
         //remove the class of apple
         squares[currentSnake[0]].classList.remove('apple')
         //grow our snake by adding class of snake to it
         squares[tail].classList.add('snake')
-        console.log(tail)
         //grow our snake array
         currentSnake.push(tail)
-        console.log(currentSnake)
         //generate new apple
         generateApple()
         //add one to the score
@@ -119,14 +108,11 @@ function move() {
         scoreDisplay.textContent = score
         //speed up our snake
         clearInterval(timerId)
-        console.log(intervalTime)
         intervalTime = intervalTime * speed
-        console.log(intervalTime)
         timerId = setInterval(move, intervalTime)
     }
-    
-    
-    
+     
+    //add styling so we can see it
     squares[currentSnake[0]].classList.add('snake')
 }
 
@@ -186,16 +172,34 @@ function mobileControl(e) {
     }
 }
 
+function switchTheme(e) {
+    if (e.target.value === 'beachy') {
+        //clear all class names
+        document.body.classList = "";
+        // add specific class name
+        document.body.classList.add('beachy');
+    }
+    if (e.target.value === 'retro') {
+        //clear all class names
+        document.body.classList = "";
+        document.body.classList.add('retro');
+    }
+    if (e.target.value === 'luxe') {
+        //clear all class names
+        document.body.classList = "";
+        document.body.classList.add('luxe');
+    }
+}
+
 
 //add event listeners
 upBtn.addEventListener('click', mobileControl);
 leftBtn.addEventListener('click', mobileControl);
 rightBtn.addEventListener('click', mobileControl);
 downBtn.addEventListener('click', mobileControl);
+selectTheme.addEventListener('change', switchTheme);
 document.addEventListener('keydown', control);
 startButton.addEventListener('click', startGame);
 checkMobile.addEventListener('click', function() {
-    alert('click')
     mobileControls.classList.toggle('display-controls');
-    console.log(mobileControls.className);
 })
