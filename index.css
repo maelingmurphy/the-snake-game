@@ -221,7 +221,7 @@ select, input {
 
 /* Mobile Controls */
 .mobile-controls {
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .display-controls {
@@ -229,7 +229,7 @@ select, input {
 }
 
 .control {
-    font-size: 60px;
+    font-size: 40px;
     color: var(--title-color);
 }
 
@@ -255,5 +255,9 @@ select, input {
 
     .game-info, .game-container {
         padding: 20px 0;
+    }
+
+    .theme-speed {
+        display: flex;
     }
 }
