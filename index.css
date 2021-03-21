@@ -107,6 +107,10 @@
     --apple-left: 15px;
 } 
 
+.mobile-note {
+    display: none;
+}
+
 /* General Styles */
 
 html, body {
