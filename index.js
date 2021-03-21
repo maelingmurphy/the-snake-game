@@ -16,7 +16,7 @@ const mobileNote = document.querySelector('.mobile-note');
 let squares = [];
 let currentSnake = [2,1,0];
 let direction = 1;
-let width = 30;
+let width = 15;
 let appleIndex = 0;
 let score = 0;
 let intervalTime = 500;
@@ -219,7 +219,7 @@ checkMobile.addEventListener('click', function() {
         //clear grid
         grid.textContent = "";
         //set width
-        width = 30;
+        width = 15;
         //create grid
         createGrid();
         //add snake
