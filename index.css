@@ -23,6 +23,8 @@
     --btn-border: none;
     --settings-color: #000;
     --square-size: 10px;
+    --apple-size: 10px;
+    --apple-left: 10px;
    
 }
 
@@ -101,6 +103,8 @@
 .mobile {
     --grid: 200px;
     --square-size: 20px;
+    --apple-size: 20px;
+    --apple-left: 15px;
 } 
 
 /* General Styles */
@@ -232,8 +236,8 @@ select, input {
 
 .apple {
 	position: relative;
-	width: 20px;
-	height: 20px;
+	width: var(--apple-size);
+	height: var(--apple-size);
 	background-color: var(--apple-color);
 	border-radius: 2em 2em 3em 3em;
 	box-shadow: inset -.25em -.25em var(--apple-shadow-color);
@@ -243,7 +247,7 @@ select, input {
 	content: '';
 	position: absolute;
 	top: -2px;
-	left: 15px;
+	left: var(--apple-left);
 	height: 5px;
 	width: 2px;
 	background-color: transparent;
