@@ -211,6 +211,17 @@ checkMobile.addEventListener('click', function() {
         //add apple
         generateApple();
     } else {
+        //clear squares array
+        squares = [];
+        //clear grid
+        grid.textContent = "";
+        //set width
         width = 20;
+        //create grid
+        createGrid();
+        //add snake
+        currentSnake.forEach(index => squares[index].classList.add('snake'));
+        //add apple
+        generateApple();
     }
 });
