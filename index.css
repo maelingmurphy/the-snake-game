@@ -3,12 +3,15 @@
     --board-color: #FCF3EE;
     --board-border-color: #7A542E;
     --bg-color: #D6E8EA; 
-    --message-bg-color: #BC854E;
     --snake-color: #4C8D94;
     --settings-bg-color: #A1CACE;
+    --settings-border: none;
+    --btn-color: #fff;
     --btn-bg-color: #8B416B;
     --btn-bg-hover-color: #6F3456;
+    --btn-hover-color: #fff;
     --title-color: #0A0A0A;
+    --title-spacing: none;
     --apple-color: #E95952;
     --apple-shadow-color: #E33026;
     --title-font: 'Dosis', sans-serif;
@@ -17,18 +20,25 @@
     --text-transform: none;
     --select-bg-color: #fff;
     --grid: 400px;
+    --btn-border: none;
+    --settings-color: #000;
+   
 }
 
 .beachy {
     --board-color: #FCF3EE;
     --board-border-color: #7A542E;
     --bg-color: #D6E8EA; 
-    --message-bg-color: #BC854E;
     --snake-color: #4C8D94;
+    --settings-color: #000;
     --settings-bg-color: #A1CACE;
+    --settings-border: none;
+    --btn-color: #fff;
     --btn-bg-color: #8B416B;
     --btn-bg-hover-color: #6F3456;
+    --btn-hover-color: #fff;
     --title-color: #0A0A0A;
+    --title-spacing: none;
     --apple-color: #E95952;
     --apple-shadow-color: #E33026;
     --title-font: 'Dosis', sans-serif;
@@ -36,18 +46,23 @@
     --border-radius-md: 25px;
     --text-transform: none;
     --select-bg-color: #fff;
+    --btn-border: none;
 }
 
 .retro {
     --board-color: #FCF3EE;
     --board-border-color: #FCCE00;
     --bg-color: #432C0F; 
-    --message-bg-color: #FDCA00;
     --snake-color: #254A70;
+    --settings-color: #000;
     --settings-bg-color: #F66D13;
+    --settings-border: none;
+    --btn-color: #fff;
     --btn-bg-color: #224A6D;
     --btn-bg-hover-color: #0F2247;
+    --btn-hover-color: #fff;
     --title-color: #FFFAD1;
+    --title-spacing: none;
     --apple-color: #C83D13;
     --apple-shadow-color: #C83D13;
     --title-font: 'Chango', sans-serif;
@@ -55,18 +70,24 @@
     --border-radius-md: 25px;
     --text-transform: none;
     --select-bg-color: #FFFAD1;
+    --btn-border: none;
 }
 
 .luxe {
-    --board-color: #FCF3EE;
-    --board-border-color: #FCCE00;
-    --bg-color: #E8DED9; 
-    --message-bg-color: #FDCA00;
-    --snake-color: #254A70;
-    --settings-bg-color: #ADA09F;
-    --btn-bg-color: #224A6D;
-    --btn-bg-hover-color: #0F2247;
-    --title-color: #171516;
+    --board-color: #171516;
+    --board-border-color: #BC854E;
+    --bg-color: #171516; 
+    --snake-color: #fff;
+    --settings-color: #fff;
+    --settings-bg-color: none;
+    --settings-border: 1px solid #BC854E;
+    --btn-color: #fff;
+    --btn-bg-color: #684727;
+    --btn-border: none;
+    --btn-bg-hover-color: #BC854E;
+    --btn-hover-color: #fff;
+    --title-color: #fff;
+    --title-spacing: 4px;
     --apple-color: #C83D13;
     --apple-shadow-color: #C83D13;
     --title-font: 'Cormorant', serif;
@@ -119,6 +140,7 @@ h1, h2 {
     font-size: 70px;
     margin-bottom: 50px;
     text-transform: var(--text-transform);
+    letter-spacing: var(--title-spacing);
 }
 
 .settings-container {
@@ -142,8 +164,10 @@ select, input {
 
 .settings {
     background-color: var(--settings-bg-color);
+    color: var(--settings-color);
     padding: 15px;
     border-radius: var(--border-radius-sm);
+    border: var(--settings-border);
     box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.3);
 }
 .setting {
@@ -156,8 +180,9 @@ select, input {
     border-radius: var(--border-radius-md);
     background-color: var(--btn-bg-color);
     text-transform: uppercase;
+    border: var(--btn-border);
     font-size: 20px;
-    color: #fff;
+    color: var(--btn-color);
     margin-top: 25px;
     box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.3);
     outline: none;
@@ -165,6 +190,8 @@ select, input {
 
 .start-btn:hover, .start-btn:focus {
     background-color: var(--btn-bg-hover-color);
+    color: var(--btn-hover-color);
+    cursor: pointer;
 }
 
 .game-stats {
@@ -235,6 +262,7 @@ select, input {
 
 .control:hover, .control:focus {
     color: var(--board-border-color);
+    cursor: pointer;
 }
 
 .control-btn {
@@ -246,6 +274,7 @@ select, input {
 /* Media Queries */
 @media screen and (max-width: 1000px) {
     .title {
+        font-size: 50px;
         padding-top: 30px;
         margin-bottom: 0;
     }
