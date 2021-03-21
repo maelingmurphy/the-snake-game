@@ -11,6 +11,8 @@ const selectSpeed = document.querySelector('#speed');
 const selectTheme = document.querySelector('#theme');
 const checkMobile = document.querySelector('#mobile');
 const mobileControls = document.querySelector('.mobile-controls');
+const mobileNote = document.querySelector('.mobile-note');
+
 let squares = [];
 let currentSnake = [2,1,0];
 let direction = 1;
@@ -193,8 +195,9 @@ selectTheme.addEventListener('change', switchTheme);
 document.addEventListener('keydown', control);
 startButton.addEventListener('click', startGame);
 checkMobile.addEventListener('click', function() {
-    // toggle display of mobile control buttons
+    // toggle display of mobile control buttons & note
     mobileControls.classList.toggle('display-controls');
+    mobileNote.classList.toggle('mobile-note');
     // toggle mobile class on body
     document.body.classList.toggle('mobile');
     // update grid width
