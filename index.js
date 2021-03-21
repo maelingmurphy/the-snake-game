@@ -216,7 +216,7 @@ checkMobile.addEventListener('click', function() {
         //clear grid
         grid.textContent = "";
         //set width
-        width = 20;
+        width = 30;
         //create grid
         createGrid();
         //add snake
