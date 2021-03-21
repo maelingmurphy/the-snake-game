@@ -19,9 +19,10 @@
     --border-radius-md: 25px;
     --text-transform: none;
     --select-bg-color: #fff;
-    --grid: 400px;
+    --grid: 300px;
     --btn-border: none;
     --settings-color: #000;
+    --square-size: 10px;
    
 }
 
@@ -96,9 +97,13 @@
     --text-transform: uppercase;
 }
 
+/* Mobile Settings */
 .mobile {
     --grid: 200px;
+    --square-size: 20px;
 } 
+
+/* General Styles */
 
 html, body {
     margin: 0;
@@ -216,8 +221,8 @@ select, input {
 }
 
 .square {
-    width: 20px;
-    height: 20px;
+    width: var(--square-size);
+    height: var(--square-size);
 }
 
 .snake {
